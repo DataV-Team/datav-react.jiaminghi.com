@@ -1,0 +1,29 @@
+{
+  "name": "datav.jiaminghi.com",
+  "version": "2.0.0",
+  "description": "Datav Document",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "node deploy/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "dataview",
+    "charts"
+  ],
+  "author": "JiaMing <743192023@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@jiaminghi/fs": "^0.0.2",
+    "ftp": "^0.3.10",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "vuepress": "1.0.3"
+  },
+  "dependencies": {
+    "@jiaminghi/charts": "^0.2.5"
+  }
+}

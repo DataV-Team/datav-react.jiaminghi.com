@@ -1,0 +1,165 @@
+# 边框
+
+边框均由**SVG**元素绘制，体积轻量不失真，它们的使用极为方便。
+
+::: tip TIP
+边框组件默认宽高均为100%，组件内容将被slot插槽分发至边框组件下class为`border-box-content`的容器内，如有布局需要，请针对该容器布局，以免产生样式冲突，导致边框显示异常。
+:::
+
+## BorderBox1
+<div class="border-box-contaier" id="border-box-contaier1"></div>
+
+```html
+<BorderBox1>BorderBox1</BorderBox1>
+```
+<click-to-copy :info="info1" />
+
+## BorderBox2
+<div class="border-box-contaier" id="border-box-contaier2"></div>
+
+```html
+<BorderBox2>BorderBox2</BorderBox2>
+```
+<click-to-copy :info="info2" />
+
+
+## BorderBox3
+<div class="border-box-contaier" id="border-box-contaier3"></div>
+
+```html
+<BorderBox3>BorderBox3</BorderBox3>
+```
+<click-to-copy :info="info3" />
+
+## BorderBox4
+<div class="border-box-contaier" id="border-box-contaier4"></div>
+
+```html
+<BorderBox4>BorderBox4</BorderBox4>
+```
+<click-to-copy :info="info4" />
+
+## BorderBox4(reverse)
+<div class="border-box-contaier" id="border-box-contaier4-1"></div>
+
+```html
+<BorderBox4 reverse={true}>BorderBox4</BorderBox4>
+```
+
+与上边的边框组件略有不同的是，该组件具有翻转形态，你只需要设置reverse属性为true即可
+
+<click-to-copy :info="info4Reverse" />
+
+## BorderBox5
+<div class="border-box-contaier" id="border-box-contaier5"></div>
+
+```html
+<BorderBox5>BorderBox5</BorderBox5>
+```
+<click-to-copy :info="info5" />
+
+## BorderBox5(reverse)
+<div class="border-box-contaier" id="border-box-contaier5-1"></div>
+
+```html
+<BorderBox5 reverse={true}>BorderBox5</BorderBox5>
+```
+<click-to-copy :info="info5Reverse" />
+
+## BorderBox6
+<div class="border-box-contaier" id="border-box-contaier6"></div>
+
+```html
+<BorderBox6>BorderBox6</BorderBox6>
+```
+<click-to-copy :info="info6" />
+
+## BorderBox7
+<div class="border-box-contaier" id="border-box-contaier7"></div>
+
+```html
+<BorderBox7>BorderBox7</BorderBox7>
+```
+<click-to-copy :info="info7" />
+
+## BorderBox8
+<div class="border-box-contaier" id="border-box-contaier8"></div>
+
+```html
+<BorderBox8>BorderBox8</BorderBox8>
+```
+<click-to-copy :info="info8" />
+
+## BorderBox9
+<div class="border-box-contaier" id="border-box-contaier9"></div>
+
+```html
+<BorderBox9>BorderBox9</BorderBox9>
+```
+<click-to-copy :info="info9" />
+
+## BorderBox10
+<div class="border-box-contaier" id="border-box-contaier10"></div>
+
+```html
+<BorderBox10>BorderBox10</BorderBox10>
+```
+<click-to-copy :info="info10" />
+
+<script>
+import { render } from './utils'
+
+export default {
+  data () {
+    return {
+      info1: `<BorderBox1>BorderBox1</BorderBox1>`,
+      info2: `<BorderBox2>BorderBox2</BorderBox2>`,
+      info3: `<BorderBox3>BorderBox3</BorderBox3>`,
+      info4: `<BorderBox4>BorderBox4</BorderBox4>`,
+      info4Reverse: `<BorderBox4 reverse={true}>BorderBox4</BorderBox4>`,
+      info5: `<BorderBox5>BorderBox5</BorderBox5>`,
+      info5Reverse: `<BorderBox5 reverse={true}>BorderBox5</BorderBox5>`,
+      info6: `<BorderBox6>BorderBox6</BorderBox6>`,
+      info7: `<BorderBox7>BorderBox7</BorderBox7>`,
+      info8: `<BorderBox8>BorderBox8</BorderBox8>`,
+      info9: `<BorderBox9>BorderBox9</BorderBox9>`,
+      info10: `<BorderBox10>BorderBox10</BorderBox10>`,
+    }
+  },
+  mounted () {
+    this.renderNode()
+  },
+  methods: {
+    renderNode () {
+      Array(10).fill(0).forEach((v, i) => {
+        i++
+        const e = datav[`BorderBox${i}`]
+
+        render({ r: [e], $: `#border-box-contaier${i}` })
+
+        if (i === 4 || i === 5) { 
+          render({ r: [e, { reverse: true }], $: `#border-box-contaier${i}-1` })
+        }
+      })
+    }
+  }
+}
+</script>
+
+<style lang="less">
+.border-box-contaier {
+  height: 300px;
+  padding: 30px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #282c34;
+
+  .border-box-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #46bd87;
+    font-weight: bold;
+  }
+}
+</style>
