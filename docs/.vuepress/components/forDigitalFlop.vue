@@ -1,17 +1,20 @@
 <template>
   <div class="for-digital-flop">
-    <dv-digital-flop :config="currentConfig" style="width:200px;height:50px;" />
-
+    <div :id="id"></div>
     <div class="button" @click="change">切换数据</div>
   </div>
 </template>
 
 <script>
+import { render } from '../../guide/utils'
+
 export default {
   name: 'ForDigitalFlop',
   props: ['data'],
   data () {
     return {
+      id: `for-digital-flop-${Date.now()}`,
+
       index: 0,
 
       currentConfig: {}
@@ -27,12 +30,24 @@ export default {
 
       this.currentConfig = data[index]
       this.index = index
+
+      this.renderNode()
+    },
+    renderNode () {
+      const { id } = this
+
+      render({
+        r: [datav.DigitalFlop, { config: this.currentConfig, style: { width: '200px', height: '50px' } }],
+        $: `#${id}`
+      })
     }
   },
   mounted () {
     const { data } = this
 
     this.currentConfig = data[0]
+
+    this.renderNode()
   }
 }
 </script>

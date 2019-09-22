@@ -15,16 +15,14 @@ sidebarDepth: 2
 :::
 
 ```html
-<dv-scroll-board :config="config" style="width:500px;height:220px" />
+<ScrollBoard :config="config" style="width:500px;height:220px" />
 ```
 
 <click-to-copy :info="scrollBoardTag" />
 
 ## 基本轮播表
 
-<div class="chart-container">
-  <dv-scroll-board :config="scrollBoard1" @click="clickHandler" style="width:500px;height:200px" />
-</div>
+<div class="chart-container" id="scroll-board1"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
 <<< @/docs/guide/codeData/scrollBoard/demo1.js
@@ -32,9 +30,7 @@ sidebarDepth: 2
 
 ## 附带表头
 
-<div class="chart-container">
-  <dv-scroll-board :config="scrollBoard2" @click="clickHandler" style="width:500px;height:220px" />
-</div>
+<div class="chart-container" id="scroll-board2"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
 <<< @/docs/guide/codeData/scrollBoard/demo2.js
@@ -42,9 +38,7 @@ sidebarDepth: 2
 
 ## 附带行号
 
-<div class="chart-container">
-  <dv-scroll-board :config="scrollBoard3" @click="clickHandler" style="width:500px;height:220px" />
-</div>
+<div class="chart-container" id="scroll-board3"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
 <<< @/docs/guide/codeData/scrollBoard/demo3.js
@@ -52,9 +46,7 @@ sidebarDepth: 2
 
 ## 整页滚动
 
-<div class="chart-container">
-  <dv-scroll-board :config="scrollBoard4" @click="clickHandler" style="width:500px;height:220px" />
-</div>
+<div class="chart-container" id="scroll-board4"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
 <<< @/docs/guide/codeData/scrollBoard/demo4.js
@@ -62,9 +54,7 @@ sidebarDepth: 2
 
 ## 定制元素
 
-<div class="chart-container">
-  <dv-scroll-board :config="scrollBoard5" @click="clickHandler" style="width:500px;height:220px" />
-</div>
+<div class="chart-container" id="scroll-board5"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
 <<< @/docs/guide/codeData/scrollBoard/demo5.js
@@ -121,6 +111,8 @@ columnIndex|列索引|`Number`|---|---
 </full-width-table>
 
 <script>
+import { render } from './utils'
+
 import scrollBoard from './codeData/scrollBoard/index.js'
 
 export default {
@@ -128,12 +120,21 @@ export default {
     return {
       ...scrollBoard,
 
-      scrollBoardTag: `<dv-scroll-board :config="config" style="width:500px;height:220px" />`,
+      scrollBoardTag: `<ScrollBoard config={config} style={{width: '500px', height: '220px'}} />`,
     }
+  },
+  mounted () {
+    this.renderNode()
   },
   methods: {
     clickHandler (e) {
       console.log(e)
+    },
+    renderNode () {
+      Array(5).fill({width: '500px', height: '220px'}).forEach((style, i) => render({
+        r: [datav.ScrollBoard, {config: this[`scrollBoard${i + 1}`], style, onClick: this.clickHandler}],
+        $: `#scroll-board${i + 1}`
+      }))
     }
   }
 }

@@ -13,12 +13,12 @@ module.exports = {
     '/': {
       lang: 'zh-CN',
       title: 'DataV',
-      description: 'Vue 大屏数据展示组件库'
+      description: 'React 大屏数据展示组件库'
     },
     '/EN/': {
       lang: 'en-US',
       title: 'DataV',
-      description: 'Vue large screen data display component library'
+      description: 'React large screen data display component library'
     }
   },
   themeConfig: {

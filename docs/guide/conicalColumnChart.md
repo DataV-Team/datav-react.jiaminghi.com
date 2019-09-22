@@ -7,16 +7,14 @@ sidebarDepth: 2
 锥形柱图是特殊的柱状图，他将根据数值大小，降序排列锥形柱，适合排名类数据展示。
 
 ```html
-<dv-conical-column-chart :config="config" style="width:400px;height:200px;" />
+<ConicalColumnChart config={config} style={{width: '400px', height: '200px'}} />
 ```
 
 <click-to-copy :info="conicalColumnChartTag" />
 
 ## 基本示例
 
-<div class="chart-container">
-  <dv-conical-column-chart :config="conicalColumnChart1" style="width:400px;height:200px;" />
-</div>
+<div class="chart-container" id="conical-column-chart1"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
 <<< @/docs/guide/codeData/conicalColumnChart/demo1.js
@@ -24,9 +22,7 @@ sidebarDepth: 2
 
 ## 数值显示
 
-<div class="chart-container">
-  <dv-conical-column-chart :config="conicalColumnChart2" style="width:400px;height:200px;" />
-</div>
+<div class="chart-container" id="conical-column-chart2"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
 <<< @/docs/guide/codeData/conicalColumnChart/demo2.js
@@ -60,14 +56,27 @@ value|柱数值|`Number`|---|---
 </full-width-table>
 
 <script>
+import { render } from './utils'
+
 import conicalColumnChart from './codeData/conicalColumnChart/index.js'
 
 export default {
   data () {
     return {
-      conicalColumnChartTag: '<dv-conical-column-chart :config="config" style="width:400px;height:200px;" />',
+      conicalColumnChartTag: `<ConicalColumnChart config={config} style={{width: '400px', height: '200px'}} />`,
 
       ...conicalColumnChart
+    }
+  },
+  mounted () {
+    this.renderNode()
+  },
+  methods: {
+    renderNode () {
+      Array(2).fill({width: '400px', height: '200px'}).forEach((style, i) => render({
+        r: [datav.ConicalColumnChart, { config: this[`conicalColumnChart${i + 1}`], style }],
+        $: `#conical-column-chart${i + 1}`
+      }))
     }
   }
 }

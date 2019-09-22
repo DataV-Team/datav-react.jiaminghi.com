@@ -5,7 +5,7 @@ sidebarDepth: 2
 # 数字翻牌器
 
 ```html
-<dv-digital-flop :config="config" style="width:200px;height:50px;" />
+<DigitalFlop config={config} style={{width: '200px', height: '50px'}} />
 ```
 <click-to-copy :info="digitalFlopTag" />
 
@@ -83,7 +83,7 @@ import digitalFlop from './codeData/digitalFlop/index.js'
 export default {
   data () {
     return {
-      digitalFlopTag: '<dv-digital-flop :config="config" style="width:100px;height:50px;" />',
+      digitalFlopTag: `<DigitalFlop config={config} style={{width: '200px', height: '50px'}} />`,
 
       ...digitalFlop
     }

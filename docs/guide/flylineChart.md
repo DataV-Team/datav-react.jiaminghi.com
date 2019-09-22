@@ -7,15 +7,13 @@ sidebarDepth: 2
 设置一个中心点，若干飞线点，即可得到动态飞线图，组件提供的[dev模式](/guide/flylineChart.html#dev模式)可以帮你快速配置飞线点位置。
 
 ```html
-<dv-flyline-chart :config="config" style="width:100%;height:100%;" />
+<FlylineChart config={config} style={{width: '100%', height: '100%'}} />
 ```
 <click-to-copy :info="flylineChartTag" />
 
 ## 基本示例
 
-<div class="chart-container">
-  <dv-flyline-chart :config="flylineChart1" :dev="true" style="width:100%;height:100%;" />
-</div>
+<div class="chart-container" id="fly-line-chart1"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
 <<< @/docs/guide/codeData/flylineChart/demo1.js
@@ -23,9 +21,7 @@ sidebarDepth: 2
 
 ## 附带图标
 
-<div class="chart-container">
-  <dv-flyline-chart :config="flylineChart2" :dev="true" style="width:100%;height:100%;" />
-</div>
+<div class="chart-container" id="fly-line-chart2"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
 <<< @/docs/guide/codeData/flylineChart/demo2.js
@@ -33,9 +29,7 @@ sidebarDepth: 2
 
 ## 附带文本
 
-<div class="chart-container">
-  <dv-flyline-chart :config="flylineChart3" :dev="true" style="width:100%;height:100%;" />
-</div>
+<div class="chart-container" id="fly-line-chart3"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
 <<< @/docs/guide/codeData/flylineChart/demo3.js
@@ -43,9 +37,7 @@ sidebarDepth: 2
 
 ## 凹聚飞线
 
-<div class="chart-container">
-  <dv-flyline-chart :config="flylineChart4" :dev="true" style="width:100%;height:100%;" />
-</div>
+<div class="chart-container" id="fly-line-chart4"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
 <<< @/docs/guide/codeData/flylineChart/demo4.js
@@ -56,14 +48,14 @@ sidebarDepth: 2
 组件提供了dev模式 (本页展示的Demo均已开启)，可以帮你快速确定飞线点位置，设置组件属性`dev`为`true`即可启用dev模式：
 
 ```html
-<dv-flyline-chart :config="config" :dev="true" style="width:200px;height:100px;" />
+<FlylineChart config={config} dev={true} style={{width: '200px', height: '100px'}} />
 ```
 <click-to-copy :info="flylineChartTag2" />
 
 ::: tip TIP
 开启dev模式后，请打开浏览器控制台，然后点击飞线图组件中你想要设置的飞线的起始点位置或中心点位置，控制台会输出该点在组件中的位置信息：
 
-`dv-flyline-chart DEV:`
+`FlylineChart DEV:`
 
 `Click Position is [100, 100]`
 
@@ -170,15 +162,28 @@ url|图片url|`String`|---|`''`
 </full-width-table>
 
 <script>
+import { render } from './utils'
+
 import flylineChart from './codeData/flylineChart/index.js'
 
 export default {
   data () {
     return {
-      flylineChartTag: '<dv-flyline-chart :config="config" style="width:100%;height:100%;" />',
-      flylineChartTag2: '<dv-flyline-chart :config="config" :dev="true" style="width:200px;height:100px;" />',
+      flylineChartTag: `<FlylineChart config={config} style={{width: '100%', height: '100%'}} />`,
+      flylineChartTag2: `<FlylineChart config={config} dev={true} style={{width: '200px', height: '100px'}} />`,
 
       ...flylineChart
+    }
+  },
+  mounted () {
+    this.renderNode()
+  },
+  methods: {
+    renderNode () {
+      Array(4).fill({width: '100%', height: '100%'}).forEach((style, i) => render({
+        r: [datav.FlylineChart, { config: this[`flylineChart${i + 1}`], style, dev: true }],
+        $: `#fly-line-chart${i + 1}`
+      }))
     }
   }
 }
