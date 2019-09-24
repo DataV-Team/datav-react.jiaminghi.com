@@ -1,5 +1,5 @@
 {
-  "name": "datav.jiaminghi.com",
+  "name": "datav.react.jiaminghi.com",
   "version": "2.0.0",
   "description": "Datav Document",
   "main": "index.js",
@@ -10,11 +10,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "vue",
+    "react",
     "dataview",
     "charts"
   ],
-  "author": "JiaMing <743192023@qq.com>",
+  "author": "DuanYu <949267840@qq.com>",
   "license": "MIT",
   "devDependencies": {
     "@jiaminghi/fs": "^0.0.2",

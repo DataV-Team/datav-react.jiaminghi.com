@@ -60,7 +60,7 @@ import { BorderBox1 } from '@jiaminghi/data-view-react'
 
 ## UMD 版
 
-`UMD`版可直接使用`script`标签引入，`UMD`版文件下载请移步[UMD](https://github.com/jiaming743/DataV/tree/master/dist)，引入后通过**datav**命名空间使用对应的组件，引入`data-view-react`前请确保已引入`react 和 react-dom`。
+`UMD`版可直接使用`script`标签引入，引入后通过**datav**命名空间使用对应的组件，引入`data-view-react`前请确保已引入`react 和 react-dom`。
 
 <fold-box title="点击以展示/隐藏UMD版使用示例">
 <<< @/docs/guide/umdExample.html
