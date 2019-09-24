@@ -2,6 +2,7 @@
   "name": "manage-desk",
   "version": "1.0.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@jiaminghi/data-view-react": "^1.0.0",
     "classnames": "^2.2.6",
