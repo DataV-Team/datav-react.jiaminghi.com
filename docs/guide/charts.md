@@ -1,20 +1,21 @@
 # 图表
 
-图表组件基于[Charts](http://charts.jiaminghi.com)封装，只需要将对应图表`option`数据传入组件即可。
+图表组件基于[Charts](http://charts.jiaminghi.com)封装，只需要将对应图表`option`数据传入组件即可。（[Vue 版本](http://datav.jiaminghi.com/guide/charts.html)）
 
 ::: tip TIP
 当窗口发生**resize**时，图表组件会重新计算宽高以便于自适应。
 :::
 
-相关示例请移步[Charts实例](http://charts.jiaminghi.com/example/)
+相关示例请移步[Charts 实例](http://charts.jiaminghi.com/example/)
 
-相关配置项请移步[Charts配置项](http://charts.jiaminghi.com/config/)
+相关配置项请移步[Charts 配置项](http://charts.jiaminghi.com/config/)
 
 <div class="demo-container" id="charts"></div>
 
 ```html
 <Charts option={option} />
 ```
+
 <click-to-copy :info="html" />
 
 <fold-box title="点击以展示/隐藏option数据">

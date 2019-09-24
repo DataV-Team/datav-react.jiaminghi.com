@@ -4,11 +4,14 @@ sidebarDepth: 2
 
 # 水位图
 
+（[Vue 版本](http://datav.jiaminghi.com/guide/waterLevelPond.html)）
+
 水位图有三种形态，多种配置，具体使用示例如下：
 
 ```html
 <WaterLevelPond config={config} style={{width: '150px', height: '200px'}} />
 ```
+
 <click-to-copy :info="waterLevelPondTag" />
 
 ## 矩形水位图
@@ -35,7 +38,7 @@ sidebarDepth: 2
 <<< @/docs/guide/codeData/waterLevelPond/demo3.js
 </fold-box>
 
-## config属性
+## config 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值

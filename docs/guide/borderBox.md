@@ -1,109 +1,131 @@
 # 边框
 
-边框均由**SVG**元素绘制，体积轻量不失真，它们的使用极为方便。
+边框均由**SVG**元素绘制，体积轻量不失真，它们的使用极为方便。（[Vue 版本](http://datav.jiaminghi.com/guide/borderBox.html)）
 
 ::: tip TIP
-边框组件默认宽高均为100%，组件内容将被slot插槽分发至边框组件下class为`border-box-content`的容器内，如有布局需要，请针对该容器布局，以免产生样式冲突，导致边框显示异常。
+边框组件默认宽高均为 100%，组件内容将子组件（类似于 Vue 插槽）分发至边框组件下 class 为`border-box-content`的容器内，如有布局需要，请针对该容器布局，以免产生样式冲突，导致边框显示异常。
 :::
 
 ## BorderBox1
+
 <div class="border-box-contaier" id="border-box-contaier1"></div>
 
 ```html
 <BorderBox1>BorderBox1</BorderBox1>
 ```
+
 <click-to-copy :info="info1" />
 
 ## BorderBox2
+
 <div class="border-box-contaier" id="border-box-contaier2"></div>
 
 ```html
 <BorderBox2>BorderBox2</BorderBox2>
 ```
+
 <click-to-copy :info="info2" />
 
-
 ## BorderBox3
+
 <div class="border-box-contaier" id="border-box-contaier3"></div>
 
 ```html
 <BorderBox3>BorderBox3</BorderBox3>
 ```
+
 <click-to-copy :info="info3" />
 
 ## BorderBox4
+
 <div class="border-box-contaier" id="border-box-contaier4"></div>
 
 ```html
 <BorderBox4>BorderBox4</BorderBox4>
 ```
+
 <click-to-copy :info="info4" />
 
 ## BorderBox4(reverse)
+
 <div class="border-box-contaier" id="border-box-contaier4-1"></div>
 
 ```html
-<BorderBox4 reverse={true}>BorderBox4</BorderBox4>
+<BorderBox4 reverse="{true}">BorderBox4</BorderBox4>
 ```
 
-与上边的边框组件略有不同的是，该组件具有翻转形态，你只需要设置reverse属性为true即可
+与上边的边框组件略有不同的是，该组件具有翻转形态，你只需要设置 reverse 属性为 true 即可
 
 <click-to-copy :info="info4Reverse" />
 
 ## BorderBox5
+
 <div class="border-box-contaier" id="border-box-contaier5"></div>
 
 ```html
 <BorderBox5>BorderBox5</BorderBox5>
 ```
+
 <click-to-copy :info="info5" />
 
 ## BorderBox5(reverse)
+
 <div class="border-box-contaier" id="border-box-contaier5-1"></div>
 
 ```html
-<BorderBox5 reverse={true}>BorderBox5</BorderBox5>
+<BorderBox5 reverse="{true}">BorderBox5</BorderBox5>
 ```
+
 <click-to-copy :info="info5Reverse" />
 
 ## BorderBox6
+
 <div class="border-box-contaier" id="border-box-contaier6"></div>
 
 ```html
 <BorderBox6>BorderBox6</BorderBox6>
 ```
+
 <click-to-copy :info="info6" />
 
 ## BorderBox7
+
 <div class="border-box-contaier" id="border-box-contaier7"></div>
 
 ```html
 <BorderBox7>BorderBox7</BorderBox7>
 ```
+
 <click-to-copy :info="info7" />
 
 ## BorderBox8
+
 <div class="border-box-contaier" id="border-box-contaier8"></div>
 
 ```html
 <BorderBox8>BorderBox8</BorderBox8>
 ```
+
 <click-to-copy :info="info8" />
 
 ## BorderBox9
+
 <div class="border-box-contaier" id="border-box-contaier9"></div>
 
 ```html
 <BorderBox9>BorderBox9</BorderBox9>
 ```
+
 <click-to-copy :info="info9" />
 
 ## BorderBox10
+
 <div class="border-box-contaier" id="border-box-contaier10"></div>
 
 ```html
 <BorderBox10>BorderBox10</BorderBox10>
 ```
+
 <click-to-copy :info="info10" />
 
 <script>

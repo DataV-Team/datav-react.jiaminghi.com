@@ -4,9 +4,12 @@ sidebarDepth: 2
 
 # 数字翻牌器
 
+（[Vue 版本](http://datav.jiaminghi.com/guide/digitalFlop.html)）
+
 ```html
 <DigitalFlop config={config} style={{width: '200px', height: '50px'}} />
 ```
+
 <click-to-copy :info="digitalFlopTag" />
 
 ## 基本示例
@@ -39,7 +42,7 @@ sidebarDepth: 2
 <<< @/docs/guide/codeData/digitalFlop/demo3.js
 </fold-box>
 
-## config属性
+## config 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值

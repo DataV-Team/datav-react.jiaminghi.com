@@ -4,6 +4,7 @@ sidebarDepth: 2
 
 # 胶囊柱图
 
+（[Vue 版本](http://datav.jiaminghi.com/guide/capsuleChart.html)）
 
 ```html
 <CapsuleChart config={config} style={{width:300px;height:200px}} />
@@ -35,7 +36,7 @@ sidebarDepth: 2
 <<< @/docs/guide/codeData/capsuleChart/demo3.js
 </fold-box>
 
-## config属性
+## config 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值
@@ -45,13 +46,13 @@ unit|单位|`String`|---|`''`
 colors|环颜色|`Array<String>`|[1]|[2]
 </full-width-table>
 
-## config注释
+## config 注释
 
 [1] 颜色支持`hex|rgb|rgba|颜色关键字`等四种类型。
 
 [2] 默认配色为`['#37a2da', '#32c5e9', '#67e0e3', '#9fe6b8', '#ffdb5c', '#ff9f7f', '#fb7293']`。
 
-## data属性
+## data 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值

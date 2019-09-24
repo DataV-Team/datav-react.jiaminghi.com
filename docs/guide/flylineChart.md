@@ -4,11 +4,12 @@ sidebarDepth: 2
 
 # 飞线图
 
-设置一个中心点，若干飞线点，即可得到动态飞线图，组件提供的[dev模式](/guide/flylineChart.html#dev模式)可以帮你快速配置飞线点位置。
+设置一个中心点，若干飞线点，即可得到动态飞线图，组件提供的[dev 模式](/guide/flylineChart.html#dev模式)可以帮你快速配置飞线点位置。（[Vue 版本](http://datav.jiaminghi.com/guide/flylineChart.html)）
 
 ```html
 <FlylineChart config={config} style={{width: '100%', height: '100%'}} />
 ```
+
 <click-to-copy :info="flylineChartTag" />
 
 ## 基本示例
@@ -43,17 +44,18 @@ sidebarDepth: 2
 <<< @/docs/guide/codeData/flylineChart/demo4.js
 </fold-box>
 
-## dev模式
+## dev 模式
 
-组件提供了dev模式 (本页展示的Demo均已开启)，可以帮你快速确定飞线点位置，设置组件属性`dev`为`true`即可启用dev模式：
+组件提供了 dev 模式 (本页展示的 Demo 均已开启)，可以帮你快速确定飞线点位置，设置组件属性`dev`为`true`即可启用 dev 模式：
 
 ```html
 <FlylineChart config={config} dev={true} style={{width: '200px', height: '100px'}} />
 ```
+
 <click-to-copy :info="flylineChartTag2" />
 
 ::: tip TIP
-开启dev模式后，请打开浏览器控制台，然后点击飞线图组件中你想要设置的飞线的起始点位置或中心点位置，控制台会输出该点在组件中的位置信息：
+开启 dev 模式后，请打开浏览器控制台，然后点击飞线图组件中你想要设置的飞线的起始点位置或中心点位置，控制台会输出该点在组件中的位置信息：
 
 `FlylineChart DEV:`
 
@@ -61,10 +63,10 @@ sidebarDepth: 2
 
 `Relative Position is [0.10, 0.10]`
 
-组件默认使用相对坐标，应选用`Relative Position`，关闭相对坐标模式，则需要使用`Click Position`，如何开启和关闭相对坐标模式请查阅config属性。
+组件默认使用相对坐标，应选用`Relative Position`，关闭相对坐标模式，则需要使用`Click Position`，如何开启和关闭相对坐标模式请查阅 config 属性。
 :::
 
-## config属性
+## config 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值
@@ -86,7 +88,7 @@ centerPointImg|中心点图片配置|`Object`|---|[centerPointImg](/guide/flylin
 pointsImg|飞线点图片配置|`Object`|---|[pointsImg](/guide/flylineChart.html#pointsimg属性)
 </full-width-table>
 
-## config相关注释
+## config 相关注释
 
 [1] 飞线起始点数据的子元素可以为**数组**或**对象**，当为数组时，即点坐标数据；当为对象时，该对象包涵点坐标位置和文本信息。两种示例如下：
 
@@ -95,7 +97,7 @@ pointsImg|飞线点图片配置|`Object`|---|[pointsImg](/guide/flylineChart.htm
 points = [
   // 飞线起始点的坐标
   [10, 10],
-  [100, 100]
+  [100, 100],
 ]
 
 // 子元素为对象
@@ -103,8 +105,8 @@ points = [
   {
     position: [0.33, 0.52],
     // 飞线图自动显示该点文本信息
-    text: '飞线点A'
-  }
+    text: '飞线点A',
+  },
 ]
 ```
 
@@ -118,9 +120,9 @@ points = [
 
 [6] `duration`用于计算每一条飞线的动画时长（10 = 1s），`duration[0]`用于控制动画最短时长，`duration[1]`用于控制动画最长时长，飞线的动画时长将在此范围随机。如果想要每一条飞线的动画时长都相等可以将他们的值设为相同的。
 
-[7] `relative`用于控制是否启用**相对坐标模式**，因为飞线图组件的宽高可能是自适应的，如按百分比计算宽高，使用相对坐标模式可使飞线点的位置同样按飞线图组件宽高的百分比计算。默认启用相对坐标模式，请根据情况，选用Dev模式下输出的点坐标信息。
+[7] `relative`用于控制是否启用**相对坐标模式**，因为飞线图组件的宽高可能是自适应的，如按百分比计算宽高，使用相对坐标模式可使飞线点的位置同样按飞线图组件宽高的百分比计算。默认启用相对坐标模式，请根据情况，选用 Dev 模式下输出的点坐标信息。
 
-## text属性
+## text 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值
@@ -130,7 +132,7 @@ color|文本颜色|`String`|---|`#ffdb5c`
 fontSize|文本文字大小|`Number`|---|`12`
 </full-width-table>
 
-## halo属性
+## halo 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值
@@ -141,7 +143,7 @@ color|光晕颜色|`String`|---|`#fb7293`
 radius|光晕最大半径|`Number`|---|`120`
 </full-width-table>
 
-## centerPointImg属性
+## centerPointImg 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值
@@ -151,7 +153,7 @@ height|图片高度|`Number`|---|`40`
 url|图片url|`String`|---|`''`
 </full-width-table>
 
-## pointsImg属性
+## pointsImg 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值

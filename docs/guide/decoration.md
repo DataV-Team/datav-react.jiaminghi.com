@@ -1,109 +1,135 @@
 # 装饰
 
-你可以使用装饰去点缀你的页面，以增强视觉效果，与边框组件相同，他们也是用**SVG**元素绘制的。
+你可以使用装饰去点缀你的页面，以增强视觉效果，与边框组件相同，他们也是用**SVG**元素绘制的。（[Vue 版本](http://datav.jiaminghi.com/guide/decoration.html)）
 
 ## Decoration1
+
 <div class="decoration-contaier" id="decoration-contaier1"></div>
 
 ```html
 <Decoration1 style={{width: '200px', height: '50px'}} />
 ```
+
 <click-to-copy :info="info1" />
 
 ## Decoration2
+
 <div class="decoration-contaier" id="decoration-contaier2"></div>
 
 ```html
 <Decoration2 style={{width: '200px', height: '5px'}} />
 ```
+
 <click-to-copy :info="info2" />
 
 ## Decoration2(reverse)
+
 <div class="decoration-contaier" id="decoration-contaier2-1"></div>
 
 ```html
 <Decoration2 reverse={true} style={{width: '5px', height: '150px'}}/>
 ```
+
 <click-to-copy :info="info2r" />
 
 ## Decoration3
+
 <div class="decoration-contaier" id="decoration-contaier3"></div>
 
 ```html
 <Decoration3 style={{width: '250px', height: '30px'}],} />
 ```
+
 <click-to-copy :info="info3" />
 
 ## Decoration4
+
 <div class="decoration-contaier" id="decoration-contaier4"></div>
 
 ```html
 <Decoration4 style={{width: '5px', height: '150px'}} />
 ```
+
 <click-to-copy :info="info4" />
 
 ## Decoration4(reverse)
+
 <div class="decoration-contaier" id="decoration-contaier4-1"></div>
 
 ```html
 <Decoration4 reverse={true} style={{width: '250px', height: '5px'}} />
 ```
+
 <click-to-copy :info="info4r" />
 
 ## Decoration5
+
 <div class="decoration-contaier" id="decoration-contaier5"></div>
 
 ```html
 <Decoration5 style={{width: '300px', height: '40px'}} />
 ```
+
 <click-to-copy :info="info5" />
 
 ## Decoration6
+
 <div class="decoration-contaier" id="decoration-contaier6"></div>
 
 ```html
 <Decoration6 style={{width: '300px', height: '30px'}} />
 ```
+
 <click-to-copy :info="info6" />
 
 ## Decoration7
+
 <div class="decoration-contaier font1" id="decoration-contaier7"></div>
 
 ```html
 <Decoration7 style={{width: '150px', height: '30px'}}>Decoration</Decoration7>
 ```
+
 <click-to-copy :info="info7" />
 
 ## Decoration8
+
 <div class="decoration-contaier" id="decoration-contaier8"></div>
 
 ```html
 <Decoration8 style={{width: '300px', height: '50px'}} />
 ```
+
 <click-to-copy :info="info8" />
 
 ## Decoration8(reverse)
+
 <div class="decoration-contaier" id="decoration-contaier8-1"></div>
 
 ```html
 <Decoration8 reverse={true} style={{width: '300px', height: '50px'}} />
 ```
+
 <click-to-copy :info="info8r" />
 
 ## Decoration9
+
 <div class="decoration-contaier font2" id="decoration-contaier9"></div>
 
 ```html
 <Decoration9 style={{width: '150px', height: '150px'}}>66%</Decoration9>
 ```
+
 <click-to-copy :info="info9" />
 
 ## Decoration10
+
 <div class="decoration-contaier font2" id="decoration-contaier10"></div>
 
 ```html
 <Decoration10 style={{width: '90%', height: '5px'}} />
 ```
+
 <click-to-copy :info="info10" />
 
 <script>
@@ -184,4 +210,3 @@ export default {
   text-shadow: 0 0 3px #7acaec;
 }
 </style>
-

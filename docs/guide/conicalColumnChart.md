@@ -4,7 +4,7 @@ sidebarDepth: 2
 
 # 锥形柱图
 
-锥形柱图是特殊的柱状图，他将根据数值大小，降序排列锥形柱，适合排名类数据展示。
+锥形柱图是特殊的柱状图，他将根据数值大小，降序排列锥形柱，适合排名类数据展示。（[Vue 版本](http://datav.jiaminghi.com/guide/conicalColumnChart.html)）
 
 ```html
 <ConicalColumnChart config={config} style={{width: '400px', height: '200px'}} />
@@ -28,7 +28,7 @@ sidebarDepth: 2
 <<< @/docs/guide/codeData/conicalColumnChart/demo2.js
 </fold-box>
 
-## config属性
+## config 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值
@@ -46,7 +46,7 @@ showValue|显示数值|`Boolean`|---|`false`
 将根据自动排序后的排名顺序使用**img**中的图片。
 :::
 
-## data属性
+## data 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值

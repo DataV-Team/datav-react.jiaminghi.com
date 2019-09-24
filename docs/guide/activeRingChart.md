@@ -4,7 +4,7 @@ sidebarDepth: 2
 
 # 动态环图
 
-基于**Charts**封装。
+基于**Charts**封装。（[Vue 版本](http://datav.jiaminghi.com/guide/activeRingChart.html)）
 
 ```html
 <ActiveRingChart config={config} style={{ width: '300px', height: '300px'}} />
@@ -36,7 +36,7 @@ sidebarDepth: 2
 <<< @/docs/guide/codeData/activeRingChart/demo3.js
 </fold-box>
 
-## config属性
+## config 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值
@@ -52,7 +52,7 @@ animationCurve|动效曲线|`String`|[Transition](http://transition.jiaminghi.co
 animationFrame|动效帧数|`Number`|[3]|`50`
 </full-width-table>
 
-## config注释
+## config 注释
 
 [1] 颜色支持`hex|rgb|rgba|颜色关键字`等四种类型。
 
@@ -67,7 +67,7 @@ digitalFlopStyle: {
 
 [3] `animationFrame`用于配置动画过程的帧数即动画时长。
 
-## data属性
+## data 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值

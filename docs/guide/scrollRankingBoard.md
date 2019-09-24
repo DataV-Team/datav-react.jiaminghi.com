@@ -4,7 +4,7 @@ sidebarDepth: 2
 
 # 排名轮播表
 
-排名轮播表同轮播表类似，也可以选择单条轮播或整页轮播。
+排名轮播表同轮播表类似，也可以选择单条轮播或整页轮播。（[Vue 版本](http://datav.jiaminghi.com/guide/scrollRankingBoard.html)）
 
 ```html
 <ScrollRankingBoard config={config} style={{width: '500px', height: '300px'}} />
@@ -36,7 +36,7 @@ sidebarDepth: 2
 <<< @/docs/guide/codeData/scrollRankingBoard/demo3.js
 </fold-box>
 
-## config属性
+## config 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值
@@ -48,7 +48,7 @@ carousel|轮播方式|`String`|`'single'|'page'`|`'single'`
 unit|数值单位|`String`|---|`''`
 </full-width-table>
 
-## data属性
+## data 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值

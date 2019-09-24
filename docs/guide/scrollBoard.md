@@ -4,18 +4,18 @@ sidebarDepth: 2
 
 # 轮播表
 
-轮播表可以单条轮播也可以整页轮播，支持点击事件，展示数据使用**v-html**渲染，因此你可以传递`html`字符串，定制个性化元素。
+轮播表可以单条轮播也可以整页轮播，支持点击事件，展示数据使用**v-html**渲染，因此你可以传递`html`字符串，定制个性化元素。（[Vue 版本](http://datav.jiaminghi.com/guide/scrollBoard.html)）
 
 ::: tip TIP
-组件内部没有设置`deep`监听props，数据变更时，请生成新的props，不然组件将无法刷新状态
+组件内部没有设置深度监听 props，数据变更时，请生成新的 props，不然组件将无法刷新状态
 
-`this.config.data = ['foo', 'foo']`是无效的
+`config.data = ['foo', 'foo']`是无效的
 
-`this.config = { data: ['foo', 'foo'] }`才是有效的
+`config = { data: ['foo', 'foo'] }`才是有效的
 :::
 
 ```html
-<ScrollBoard :config="config" style="width:500px;height:220px" />
+<ScrollBoard config={config} style={{width: '500px', height: '220px'}} />
 ```
 
 <click-to-copy :info="scrollBoardTag" />
@@ -60,7 +60,7 @@ sidebarDepth: 2
 <<< @/docs/guide/codeData/scrollBoard/demo5.js
 </fold-box>
 
-## config属性
+## config 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值
@@ -79,7 +79,7 @@ index|显示行号|`Boolean`|`true|false`|`false`
 carousel|轮播方式|`String`|`'single'|'page'`|`'single'`
 </full-width-table>
 
-## config相关注释
+## config 相关注释
 
 [1] `columnWidth`可以配置每一列的宽度，默认情况下每一列宽度相等。
 
@@ -93,13 +93,14 @@ carousel|轮播方式|`String`|`'single'|'page'`|`'single'`
 columnWidth: [50]
 // 剩下两列宽度将自动计算
 ```
+
 :::
 
-## click事件
+## click 事件
 
 当单元格被点击时（表头不支持），轮播表将抛出一个`click`事件，包含被点击的单元格的相关数据，打开控制台并点击上面例子中的轮播表可以查看事件数据。
 
-## click事件数据属性
+## click 事件数据属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值

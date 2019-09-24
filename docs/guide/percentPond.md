@@ -4,12 +4,16 @@ sidebarDepth: 2
 
 # 进度池
 
+（[Vue 版本](http://datav.jiaminghi.com/guide/percentPond.html)）
+
 ```html
 <PercentPond config={config} style={{width: '200px', height: '100px'}} />
 ```
+
 <click-to-copy :info="percentPondTag" />
 
 ## 基本示例
+
 <div class="chart-container" style="height: 150px;" id="percent-pond1"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
@@ -17,6 +21,7 @@ sidebarDepth: 2
 </fold-box>
 
 ## 调节边框
+
 <div class="chart-container" style="height: 150px;" id="percent-pond2"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
@@ -24,6 +29,7 @@ sidebarDepth: 2
 </fold-box>
 
 ## 线条间隙
+
 <div class="chart-container" style="height: 150px;" id="percent-pond3"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
@@ -31,6 +37,7 @@ sidebarDepth: 2
 </fold-box>
 
 ## 局部渐变
+
 <div class="chart-container" style="height: 150px;" id="percent-pond4"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
@@ -38,6 +45,7 @@ sidebarDepth: 2
 </fold-box>
 
 ## 定制块隙长度
+
 <div class="chart-container" style="height: 150px;" id="percent-pond5"></div>
 
 <fold-box title="点击以展示/隐藏config数据">
@@ -45,10 +53,10 @@ sidebarDepth: 2
 </fold-box>
 
 ::: tip TIP
-百分比标签已通过CSS`display:none`隐藏。
+百分比标签已通过 CSS`display:none`隐藏。
 :::
 
-## config属性
+## config 属性
 
 <full-width-table>
 属性|说明|类型|可选值|默认值
