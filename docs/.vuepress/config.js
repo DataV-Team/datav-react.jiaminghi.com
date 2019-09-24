@@ -13,13 +13,13 @@ module.exports = {
     '/': {
       lang: 'zh-CN',
       title: 'DataV',
-      description: 'React 大屏数据展示组件库'
+      description: 'React 大屏数据展示组件库',
     },
     '/EN/': {
       lang: 'en-US',
       title: 'DataV',
-      description: 'React large screen data display component library'
-    }
+      description: 'React large screen data display component library',
+    },
   },
   themeConfig: {
     locales: {
@@ -29,29 +29,29 @@ module.exports = {
         nav: [
           {
             text: '指南',
-            link: '/guide/'
+            link: '/guide/',
           },
           {
             text: '支持',
-            link: '/support/'
+            link: '/support/',
           },
           {
             text: 'Demo',
-            link: '/demo/'
+            link: '/demo/',
           },
           {
             text: 'GitHub',
             items: [
               {
                 text: '项目源码仓库',
-                link: 'https://github.com/jiaming743/datav'
+                link: 'https://github.com/DataV-Team/DataV-React',
               },
               {
                 text: '文档及Demo源码仓库',
-                link: 'https://github.com/jiaming743/datav.jiaminghi.com'
-              }
-            ]
-          }
+                link: 'https://github.com/DataV-Team/datav.react.jiaminghi.com',
+              },
+            ],
+          },
         ],
         sidebar: {
           '/guide/': [
@@ -69,10 +69,10 @@ module.exports = {
             'conicalColumnChart',
             'digitalFlop',
             'scrollBoard',
-            'scrollRankingBoard'
+            'scrollRankingBoard',
           ],
-          '/dev/': ['']
-        }
+          '/dev/': [''],
+        },
       },
       '/EN/': {
         selectText: 'Languages',
@@ -80,28 +80,26 @@ module.exports = {
         nav: [
           {
             text: 'Guide',
-            link: '/guide/'
+            link: '/guide/',
           },
           {
             text: 'GitHub',
             items: [
               {
                 text: '项目源码仓库',
-                link: 'https://github.com/jiaming743/datav'
+                link: 'https://github.com/jiaming743/datav',
               },
               {
                 text: '文档及Demo源码仓库',
-                link: 'https://github.com/jiaming743/datav.jiaminghi.com'
-              }
-            ]
-          }
+                link: 'https://github.com/jiaming743/datav.jiaminghi.com',
+              },
+            ],
+          },
         ],
         sidebar: {
-          '/EN/guide/': [
-            ''
-          ]
-        }
-      }
-    }
-  }
+          '/EN/guide/': [''],
+        },
+      },
+    },
+  },
 }

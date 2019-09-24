@@ -1,4 +1,4 @@
-<h1 align="center"><a href="http://datav.jiaminghi.com">datav.jiaminghi.com</a></h1>
+<h1 align="center"><a href="http://datav.react.jiaminghi.com/">datav.react.jiaminghi.com</a></h1>
 
 <p align="center">
     <a href="https://github.com/jiaming743/datav.jiaminghi.com/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jiaming743/datav.jiaminghi.com.svg" alt="LICENSE" /> </a>
@@ -22,4 +22,4 @@ yarn dev
 yarn build
 ```
 
-[Datav](https://github.com/jiaming743/datav)
+[Datav](https://github.com/DataV-Team/DataV-React)

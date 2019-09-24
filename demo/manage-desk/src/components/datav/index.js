@@ -38,7 +38,9 @@ export default () => (
       <div className="main-header">
         <div className="mh-left">
           技术支持:
-          <a href="https://github.com/jiaming743/DataV">https://github.com/jiaming743/DataV</a>
+          <a href="https://github.com/DataV-Team/DataV-React">
+            https://github.com/DataV-Team/DataV-React
+          </a>
         </div>
         <div className="mh-middle">Demo-机电运维管理台</div>
         <div className="mh-right">

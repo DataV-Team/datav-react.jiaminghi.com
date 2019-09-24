@@ -4,7 +4,7 @@
   "private": true,
   "homepage": ".",
   "dependencies": {
-    "@jiaminghi/data-view-react": "^1.0.0",
+    "@jiaminghi/data-view-react": "*",
     "classnames": "^2.2.6",
     "customize-cra": "^0.7.0",
     "less": "^3.10.3",
