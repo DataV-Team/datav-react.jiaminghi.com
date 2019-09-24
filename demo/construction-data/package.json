@@ -1,7 +1,8 @@
 {
   "name": "construction-data",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@jiaminghi/data-view-react": "^1.0.0",
     "classnames": "^2.2.6",

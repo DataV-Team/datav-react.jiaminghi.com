@@ -1,6 +1,6 @@
 {
   "name": "manage-desk",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@jiaminghi/data-view-react": "^1.0.0",
