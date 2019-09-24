@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@jiaminghi/data-view-react": "^0.1.0",
+    "@jiaminghi/data-view-react": "^1.0.0",
     "classnames": "^2.2.6",
     "customize-cra": "^0.7.0",
     "less": "^3.10.3",
