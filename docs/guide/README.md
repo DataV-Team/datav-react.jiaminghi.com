@@ -48,6 +48,9 @@ yarn add @jiaminghi/data-view-react
 import dataV from '@jiaminghi/data-view-react'
 
 datav.BorderBox1
+
+// 或者
+import { BorderBox1 } from '@jiaminghi/data-view-react'
 ```
 
 ## 按需引入
@@ -55,7 +58,7 @@ datav.BorderBox1
 按需引入仅支持基于**ES module**的**tree shaking**，按需引入示例如下：
 
 ```js
-import { BorderBox1 } from '@jiaminghi/data-view-react'
+import BorderBox1 from '@jiaminghi/data-view-react/es/borderBox1'
 ```
 
 ## UMD 版
