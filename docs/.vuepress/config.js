@@ -5,7 +5,7 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['script', { src: 'https://unpkg.com/react@16.9.0/umd/react.development.js' }],
     ['script', { src: 'https://unpkg.com/react-dom@16.9.0/umd/react-dom.development.js' }],
-    ['script', { src: '/datav.map.react.js' }],
+    ['script', { src: 'https://unpkg.com/@jiaminghi/data-view-react/umd/datav.min.js' }],
   ],
   host: 'localhost',
   port: 5000,

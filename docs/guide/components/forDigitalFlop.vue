@@ -8,25 +8,15 @@
 export default {
   name: 'ForDigitalFlop',
   props: ['data'],
-  data () {
+  data() {
     return {
-      index: 0,
-
-      currentConfig: {}
+      currentConfig: {},
     }
   },
-  methods: {
-
-  },
-  mounted () {
+  mounted() {
     const { data } = this
 
     this.currentConfig = data[0]
-  }
+  },
 }
 </script>
-
-<style lang="less">
-.for-digital-flop {
-}
-</style>

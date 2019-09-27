@@ -11,17 +11,17 @@ import { render } from '../../guide/utils'
 export default {
   name: 'ForDigitalFlop',
   props: ['data'],
-  data () {
+  data() {
     return {
-      id: `for-digital-flop-${Date.now()}`,
+      id: `for-digital-flop-${Date.now()}-${Math.floor(Math.random() * 10000)}`,
 
       index: 0,
 
-      currentConfig: {}
+      currentConfig: {},
     }
   },
   methods: {
-    change () {
+    change() {
       let { index, data } = this
 
       index += 1
@@ -33,22 +33,25 @@ export default {
 
       this.renderNode()
     },
-    renderNode () {
+    renderNode() {
       const { id } = this
 
       render({
-        r: [datav.DigitalFlop, { config: this.currentConfig, style: { width: '200px', height: '50px' } }],
-        $: `#${id}`
+        r: [
+          datav.DigitalFlop,
+          { config: this.currentConfig, style: { width: '200px', height: '50px' } },
+        ],
+        $: `#${id}`,
       })
-    }
+    },
   },
-  mounted () {
+  mounted() {
     const { data } = this
 
     this.currentConfig = data[0]
 
     this.renderNode()
-  }
+  },
 }
 </script>
 
