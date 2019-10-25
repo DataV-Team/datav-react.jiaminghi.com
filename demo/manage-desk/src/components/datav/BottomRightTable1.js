@@ -28,7 +28,7 @@ export default () => (
   <div className="bottom-right-table-1">
     <BorderBox6>
       <div className="table-name">
-        <img src={require('./img/icon1.png')} />
+        <img src={require('./img/icon1.png')} alt="icon" />
         人员贡献排行榜
       </div>
 

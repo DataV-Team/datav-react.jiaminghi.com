@@ -24,7 +24,7 @@ export default () => (
   <div className="bottom-right-table-3">
     <BorderBox6>
       <div className="table-name">
-        <img src={require('./img/icon3.png')} />
+        <img src={require('./img/icon3.png')} alt="icon" />
         常见故障排行
       </div>
 
