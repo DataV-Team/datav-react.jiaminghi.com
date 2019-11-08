@@ -1,7 +1,7 @@
 <h1 align="center"><a href="http://datav-react.jiaminghi.com/">datav.react.jiaminghi.com</a></h1>
 
 <p align="center">
-    <a href="https://github.com/jiaming743/datav.jiaminghi.com/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jiaming743/datav.jiaminghi.com.svg" alt="LICENSE" /> </a>
+    <a href="https://github.com/DataV-Team/datav-react.jiaminghi.com/blob/master/LICENSE"><img src="https://img.shields.io/github/license/DataV-Team/datav-react.jiaminghi.com.svg" alt="LICENSE" /> </a>
 </p>
 
 ### Project setup
