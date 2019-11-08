@@ -4,7 +4,7 @@ sidebarDepth: 2
 
 # 数字翻牌器
 
-（[Vue 版本](http://datav.jiaminghi.com/guide/digitalFlop.html)）
+<vue-page-btn />
 
 ```html
 <DigitalFlop config={config} style={{width: '200px', height: '50px'}} />

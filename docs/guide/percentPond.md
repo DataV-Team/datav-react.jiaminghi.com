@@ -4,7 +4,7 @@ sidebarDepth: 2
 
 # 进度池
 
-（[Vue 版本](http://datav.jiaminghi.com/guide/percentPond.html)）
+<vue-page-btn />
 
 ```html
 <PercentPond config={config} style={{width: '200px', height: '100px'}} />

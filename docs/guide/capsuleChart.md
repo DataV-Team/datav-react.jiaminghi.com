@@ -4,7 +4,7 @@ sidebarDepth: 2
 
 # 胶囊柱图
 
-（[Vue 版本](http://datav.jiaminghi.com/guide/capsuleChart.html)）
+<vue-page-btn />
 
 ```html
 <CapsuleChart config={config} style={{width:300px;height:200px}} />

@@ -1,6 +1,6 @@
 # Loading 加载
 
-数据尚未加载完成时，可以显示 Loading 效果，增强用户体验。（[Vue 版本](http://datav.jiaminghi.com/guide/loading.html)）
+数据尚未加载完成时，可以显示 Loading 效果，增强用户体验。<vue-page-btn />
 
 <div id="loading"></div>
 

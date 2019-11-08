@@ -1,6 +1,6 @@
 # 装饰
 
-你可以使用装饰去点缀你的页面，以增强视觉效果，与边框组件相同，他们也是用**SVG**元素绘制的。（[Vue 版本](http://datav.jiaminghi.com/guide/decoration.html)）
+你可以使用装饰去点缀你的页面，以增强视觉效果，与边框组件相同，他们也是用**SVG**元素绘制的。<vue-page-btn />
 
 ## Decoration1
 

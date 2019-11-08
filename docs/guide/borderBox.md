@@ -1,6 +1,6 @@
 # 边框
 
-边框均由**SVG**元素绘制，体积轻量不失真，它们的使用极为方便。（[Vue 版本](http://datav.jiaminghi.com/guide/borderBox.html)）
+边框均由**SVG**元素绘制，体积轻量不失真，它们的使用极为方便。<vue-page-btn />
 
 ::: tip TIP
 边框组件默认宽高均为 100%，组件内容将子组件（类似于 Vue 插槽）分发至边框组件下 class 为`border-box-content`的容器内，如有布局需要，请针对该容器布局，以免产生样式冲突，导致边框显示异常。

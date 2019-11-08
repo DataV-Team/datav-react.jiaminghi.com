@@ -4,7 +4,7 @@ sidebarDepth: 2
 
 # 动态环图
 
-基于**Charts**封装。（[Vue 版本](http://datav.jiaminghi.com/guide/activeRingChart.html)）
+基于**Charts**封装。<vue-page-btn />
 
 ```html
 <ActiveRingChart config={config} style={{ width: '300px', height: '300px'}} />

@@ -4,7 +4,7 @@ sidebarDepth: 2
 
 # 排名轮播表
 
-排名轮播表同轮播表类似，也可以选择单条轮播或整页轮播。（[Vue 版本](http://datav.jiaminghi.com/guide/scrollRankingBoard.html)）
+排名轮播表同轮播表类似，也可以选择单条轮播或整页轮播。<vue-page-btn />
 
 ```html
 <ScrollRankingBoard config={config} style={{width: '500px', height: '300px'}} />

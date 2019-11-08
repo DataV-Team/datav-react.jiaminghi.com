@@ -4,7 +4,7 @@ sidebarDepth: 2
 
 # 水位图
 
-（[Vue 版本](http://datav.jiaminghi.com/guide/waterLevelPond.html)）
+<vue-page-btn />
 
 水位图有三种形态，多种配置，具体使用示例如下：
 
