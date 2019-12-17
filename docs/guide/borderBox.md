@@ -6,6 +6,25 @@
 边框组件默认宽高均为 100%，组件内容将子组件（类似于 Vue 插槽）分发至边框组件下 class 为`border-box-content`的容器内，如有布局需要，请针对该容器布局，以免产生样式冲突，导致边框显示异常。
 :::
 
+## 自定义颜色
+所有边框均支持自定义颜色，配置项及示例如下。
+
+```html
+<BorderBox1 color={['red', 'green']} >BorderBox1</BorderBox1>
+```
+
+<full-width-table>
+属性|说明|类型|可选值|默认值
+:--:|:--:|:--:|:--:|:--:
+color|自定义颜色|`string[]`|`-`|`-`
+</full-width-table>
+
+::: tip TIP
+`color`属性支持配置两个颜色，一主一副。
+
+颜色类型可以为颜色关键字、十六进制色、RGB及RGBA。
+:::
+
 ## BorderBox1
 
 <div class="border-box-contaier" id="border-box-contaier1"></div>
@@ -108,6 +127,13 @@
 
 <click-to-copy :info="info8" />
 
+### 特殊配置
+<full-width-table>
+属性|说明|类型|可选值|默认值
+:--:|:--:|:--:|:--:|:--:
+dur|单次动画时长(秒)|`Number`|`-`|`3`
+</full-width-table>
+
 ## BorderBox9
 
 <div class="border-box-contaier" id="border-box-contaier9"></div>
@@ -128,6 +154,44 @@
 
 <click-to-copy :info="info10" />
 
+## BorderBox11
+
+<div class="border-box-contaier" id="border-box-contaier11"></div>
+
+```html
+<BorderBox11>BorderBox11</BorderBox11>
+```
+
+<click-to-copy :info="info11" />
+
+### 特殊配置
+<full-width-table>
+属性|说明|类型|可选值|默认值
+:--:|:--:|:--:|:--:|:--:
+title|边框标题|`String`|`-`|`''`
+titleWidth|标题宽度|`Number`|`-`|`250`
+</full-width-table>
+
+## BorderBox12
+
+<div class="border-box-contaier" id="border-box-contaier12"></div>
+
+```html
+<BorderBox12>BorderBox12</BorderBox12>
+```
+
+<click-to-copy :info="info12" />
+
+## BorderBox13
+
+<div class="border-box-contaier" id="border-box-contaier13"></div>
+
+```html
+<BorderBox13>BorderBox13</BorderBox13>
+```
+
+<click-to-copy :info="info13" />
+
 <script>
 import { render } from './utils'
 
@@ -146,6 +210,9 @@ export default {
       info8: `<BorderBox8>BorderBox8</BorderBox8>`,
       info9: `<BorderBox9>BorderBox9</BorderBox9>`,
       info10: `<BorderBox10>BorderBox10</BorderBox10>`,
+      info11: `<BorderBox11 title="dv-border-box-11">BorderBox11</BorderBox11>`,
+      info12: `<BorderBox12>BorderBox12</BorderBox12>`,
+      info13: `<BorderBox13>BorderBox13</BorderBox13>`,
     }
   },
   mounted () {
@@ -153,14 +220,22 @@ export default {
   },
   methods: {
     renderNode () {
-      Array(10).fill(0).forEach((v, i) => {
+      Array(13).fill(0).forEach((v, i) => {
         i++
         const e = datav[`BorderBox${i}`]
 
+        if (i === 11) {
+          render({ r: [e, { title: 'BorderBox11', children: 'BorderBox11' }], $: `#border-box-contaier11` })
+
+          return
+        }
+        
+
         render({ r: [e], $: `#border-box-contaier${i}` })
 
-        if (i === 4 || i === 5) { 
+        if (i === 4 || i === 5) {
           render({ r: [e, { reverse: true }], $: `#border-box-contaier${i}-1` })
+          return
         }
       })
     }

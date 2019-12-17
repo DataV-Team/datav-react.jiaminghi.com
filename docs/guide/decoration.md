@@ -1,6 +1,29 @@
+---
+sidebarDepth: 2
+---
+
 # 装饰
 
 你可以使用装饰去点缀你的页面，以增强视觉效果，与边框组件相同，他们也是用**SVG**元素绘制的。<vue-page-btn />
+
+## 自定义颜色
+所有装饰均支持自定义颜色，配置项及示例如下。
+
+```html
+<Decoration1 color={['red', 'green']} />
+```
+
+<full-width-table>
+属性|说明|类型|可选值|默认值
+:--:|:--:|:--:|:--:|:--:
+color|自定义颜色|`string[]`|`-`|`-`
+</full-width-table>
+
+::: tip TIP
+`color`属性支持配置两个颜色，一主一副。
+
+颜色类型可以为颜色关键字、十六进制色、RGB及RGBA。
+:::
 
 ## Decoration1
 
@@ -122,6 +145,13 @@
 
 <click-to-copy :info="info9" />
 
+### 特殊配置
+<full-width-table>
+属性|说明|类型|可选值|默认值
+:--:|:--:|:--:|:--:|:--:
+dur|单次动画时长(秒)|`Number`|`-`|`3`
+</full-width-table>
+
 ## Decoration10
 
 <div class="decoration-contaier font2" id="decoration-contaier10"></div>
@@ -131,6 +161,16 @@
 ```
 
 <click-to-copy :info="info10" />
+
+## Decoration11
+
+<div class="decoration-contaier font1" id="decoration-contaier11"></div>
+
+```html
+<Decoration11 style={{width: '200px', height: '60px'}} >Decoration11</Decoration11>
+```
+
+<click-to-copy :info="info11" />
 
 <script>
 import { render } from './utils'
@@ -145,7 +185,8 @@ const styles = [
   [{width: '150px', height: '30px'}],
   [{width: '300px', height: '50px'}, {width: '300px', height: '50px'}],
   [{width: '150px', height: '150px'}],
-  [{width: '90%', height: '5px'}]
+  [{width: '90%', height: '5px'}],
+  [{width: '200px', height: '60px'}],
 ]
 
 export default {
@@ -163,7 +204,8 @@ export default {
       info8: `<Decoration8 style={{width: '300px', height: '50px'}} />`,
       info8r: `<Decoration8 reverse={true} style={{width: '300px', height: '50px'}} />`,
       info9: `<Decoration9 style={{width: '150px', height: '150px'}}>66%</Decoration9>`,
-      info10: `<Decoration10 style={{width: '90%', height: '5px'}} />`
+      info10: `<Decoration10 style={{width: '90%', height: '5px'}} />`,
+      info11: `<Decoration11 style={{width: '200px', height: '60px'}} >Decoration11</Decoration11>`
     }
   },
   mounted () {
@@ -174,6 +216,16 @@ export default {
       styles.forEach((v, i) => {
         i++
         const e = datav[`Decoration${i}`]
+
+        if (i === 7 || i === 11) {
+          render({ r: [e, { style: v[0], children: `Decoration${i}` }], $: `#decoration-contaier${i}` })
+          return
+        }
+
+        if (i === 9) {
+          render({ r: [e, { style: v[0], children: '66%' }], $: `#decoration-contaier${i}` })
+          return
+        }
 
         render({ r: [e, { style: v[0] }], $: `#decoration-contaier${i}` })
 
