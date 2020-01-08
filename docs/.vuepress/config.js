@@ -66,6 +66,7 @@ module.exports = {
             'waterLevelPond',
             'percentPond',
             'flylineChart',
+            'flylineChartEnhanced',
             'conicalColumnChart',
             'digitalFlop',
             'scrollBoard',
