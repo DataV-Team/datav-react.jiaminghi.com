@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "node deploy/index.js",
+    "deploy": "npm run build && node deploy/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
