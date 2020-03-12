@@ -53,7 +53,7 @@ yarn add @jiaminghi/data-view-react
 ## 使用
 
 ```js
-import dataV from '@jiaminghi/data-view-react'
+import * as datav from '@jiaminghi/data-view-react'
 
 datav.BorderBox1
 
