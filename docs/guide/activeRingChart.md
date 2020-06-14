@@ -36,6 +36,14 @@ sidebarDepth: 2
 <<< @/docs/guide/codeData/activeRingChart/demo3.js
 </fold-box>
 
+## 显示原始值
+
+<div class="chart-container fontsize" id="active-ringChart4"></div>
+
+<fold-box title="点击以展示/隐藏config数据">
+<<< @/docs/guide/codeData/activeRingChart/demo4.js
+</fold-box>
+
 ## config 属性
 
 <full-width-table>
@@ -51,6 +59,7 @@ digitalFlopStyle|数字翻牌器样式|`Object`|---|[2]
 digitalFlopToFixed|数字翻牌器小数位数|`Number`|---|`0`
 animationCurve|动效曲线|`String`|[Transition](http://transition.jiaminghi.com/curveTable/)|`'easeOutCubic'`
 animationFrame|动效帧数|`Number`|[3]|`50`
+showOriginValue|显示原始值|`Boolean`|---|`false`
 </full-width-table>
 
 ## config 注释
@@ -97,7 +106,7 @@ export default {
   },
   methods: {
     renderNode () {
-      [1, 2, 3].forEach(v => 
+      [1, 2, 3, 4].forEach(v => 
         render({
           r: [datav.ActiveRingChart, { config: this[`activeRingChart${v}`], style }],
           $: `#active-ringChart${v}`

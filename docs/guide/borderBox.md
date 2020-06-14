@@ -7,20 +7,21 @@
 :::
 
 ::: tip 重置宽高
-如果边框组件的父容器宽高发生了变化，而边框组件没有侦知这一变化，边框就无法自适应父容器宽高。针对这种情况，你可以给边框绑定key值，在父容器宽高发生变化且完成渲染后更改key值，强制边框组件重新渲染，获取正确的宽高。但这会造成边框内的组件销毁和重新创建，在某些时候这可能并不是我们想要的，此时我们可以调用组件内置的`setWH`方法去重置边框组件的宽高以避免组件销毁和重新创建带来的非预期副作用（边框1和边框10没有内置这个方法，因为它们的自适应由CSS完成，并不依赖宽高的具体数值）。
+如果边框组件的父容器宽高发生了变化，而边框组件没有侦知这一变化，边框就无法自适应父容器宽高。针对这种情况，你可以给边框绑定key值，在父容器宽高发生变化且完成渲染后更改key值，强制边框组件重新渲染，获取正确的宽高。但这会造成边框内的组件销毁和重新创建，在某些时候这可能并不是我们想要的，此时我们可以调用组件内置的`setWH`方法去重置边框组件的宽高以避免组件销毁和重新创建带来的非预期副作用。
 :::	:::
 
 ## 自定义颜色
-所有边框均支持自定义颜色，配置项及示例如下。
+所有边框均支持自定义颜色及背景色，配置项及示例如下。
 
 ```html
-<BorderBox1 color={['red', 'green']} >BorderBox1</BorderBox1>
+<BorderBox1 color={['red', 'green']} backgroundColor='blue'>BorderBox1</BorderBox1>
 ```
 
 <full-width-table>
 属性|说明|类型|可选值|默认值
 :--:|:--:|:--:|:--:|:--:
 color|自定义颜色|`string[]`|`-`|`-`
+backgroundColor|背景色|`string`|`-`|`-`
 </full-width-table>
 
 ::: tip TIP
@@ -138,6 +139,14 @@ color|自定义颜色|`string[]`|`-`|`-`
 dur|单次动画时长(秒)|`Number`|`-`|`3`
 </full-width-table>
 
+## BorderBox8(reverse)
+<div class="border-box-contaier" id="border-box-contaier8-1"></div>
+
+```html
+<BorderBox8 reverse="{true}">BorderBox8</BorderBox8>
+```
+<click-to-copy :info="info8Reverse" />
+
 ## BorderBox9
 
 <div class="border-box-contaier" id="border-box-contaier9"></div>
@@ -212,6 +221,7 @@ export default {
       info6: `<BorderBox6>BorderBox6</BorderBox6>`,
       info7: `<BorderBox7>BorderBox7</BorderBox7>`,
       info8: `<BorderBox8>BorderBox8</BorderBox8>`,
+      info8Reverse: `<BorderBox8 reverse={true}>BorderBox8</BorderBox8>`,
       info9: `<BorderBox9>BorderBox9</BorderBox9>`,
       info10: `<BorderBox10>BorderBox10</BorderBox10>`,
       info11: `<BorderBox11 title="dv-border-box-11">BorderBox11</BorderBox11>`,
@@ -233,11 +243,10 @@ export default {
 
           return
         }
-        
 
         render({ r: [e], $: `#border-box-contaier${i}` })
 
-        if (i === 4 || i === 5) {
+        if (i === 4 || i === 5 || i === 8) {
           render({ r: [e, { reverse: true }], $: `#border-box-contaier${i}-1` })
           return
         }

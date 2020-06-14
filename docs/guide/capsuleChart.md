@@ -36,6 +36,14 @@ sidebarDepth: 2
 <<< @/docs/guide/codeData/capsuleChart/demo3.js
 </fold-box>
 
+## 显示数值
+
+<div class="chart-container" id="chart-container4"></div>
+
+<fold-box title="点击以展示/隐藏config数据">
+<<< @/docs/guide/codeData/capsuleChart/demo4.js
+</fold-box>
+
 ## config 属性
 
 <full-width-table>
@@ -44,6 +52,7 @@ sidebarDepth: 2
 data|柱数据|`Array<Object>`|[data属性](/guide/capsuleChart.html#data属性)|`[]`
 unit|单位|`String`|---|`''`
 colors|环颜色|`Array<String>`|[1]|[2]
+showValue|显示数值|`Boolean`|---|`false`
 </full-width-table>
 
 ## config 注释
@@ -79,7 +88,7 @@ export default {
   },
   methods: {
     renderNode () {
-      Array(3).fill({ width: '300px', height: '200px' }).forEach((style, i) => render({
+      Array(4).fill({ width: '300px', height: '200px' }).forEach((style, i) => render({
         r: [datav.CapsuleChart, { config: this[`capsuleChart${i + 1}`], style }],
         $: `#chart-container${i + 1}`
       }))
