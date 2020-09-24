@@ -13,7 +13,7 @@
 ## 自定义颜色
 所有边框均支持自定义颜色及背景色，配置项及示例如下。
 
-```html
+```jsx
 <BorderBox1 color={['red', 'green']} backgroundColor='blue'>BorderBox1</BorderBox1>
 ```
 
@@ -75,7 +75,7 @@ backgroundColor|背景色|`string`|`-`|`-`
 <div class="border-box-contaier" id="border-box-contaier4-1"></div>
 
 ```html
-<BorderBox4 reverse="{true}">BorderBox4</BorderBox4>
+<BorderBox4 reverse={true}>BorderBox4</BorderBox4>
 ```
 
 与上边的边框组件略有不同的是，该组件具有翻转形态，你只需要设置 reverse 属性为 true 即可
@@ -97,7 +97,7 @@ backgroundColor|背景色|`string`|`-`|`-`
 <div class="border-box-contaier" id="border-box-contaier5-1"></div>
 
 ```html
-<BorderBox5 reverse="{true}">BorderBox5</BorderBox5>
+<BorderBox5 reverse={true}>BorderBox5</BorderBox5>
 ```
 
 <click-to-copy :info="info5Reverse" />
@@ -143,7 +143,7 @@ dur|单次动画时长(秒)|`Number`|`-`|`3`
 <div class="border-box-contaier" id="border-box-contaier8-1"></div>
 
 ```html
-<BorderBox8 reverse="{true}">BorderBox8</BorderBox8>
+<BorderBox8 reverse={true}>BorderBox8</BorderBox8>
 ```
 <click-to-copy :info="info8Reverse" />
 

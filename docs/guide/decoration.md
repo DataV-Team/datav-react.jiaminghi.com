@@ -9,7 +9,7 @@ sidebarDepth: 2
 ## 自定义颜色
 所有装饰均支持自定义颜色，配置项及示例如下。
 
-```html
+```jsx
 <Decoration1 color={['red', 'green']} />
 ```
 
@@ -60,7 +60,7 @@ color|自定义颜色|`string[]`|`-`|`-`
 <div class="decoration-contaier" id="decoration-contaier3"></div>
 
 ```html
-<Decoration3 style={{width: '250px', height: '30px'}],} />
+<Decoration3 style={{width: '250px', height: '30px'}} />
 ```
 
 <click-to-copy :info="info3" />
